@@ -1,5 +1,5 @@
 // Font Sizes
-$base-font-size: 16px;
+$base-font-size: 14px;
 $em-base: $base-font-size;
 $base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: $base-font-family;
@@ -17,8 +17,8 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$width: 980px;
-$footer: 50px;
+$width: 1090px;
+$footer: 70px;
 $footer_margin: $footer - 2 * $footer;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
@@ -26,12 +26,11 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$orange: orange;
-$red: red;
+$orange: #c93037;
+$red: #cb345e;
 $blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$dark-gray: #232323;
+$light-gray: #a4a4a4;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -42,7 +41,7 @@ $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: #e5e5e5;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms

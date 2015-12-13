@@ -90,19 +90,39 @@ picture {
 }
 
 header {
-  background-color: $light-gray;
+  .inner {
+    height: 64px;
+
+    border-top: 6px solid $orange;
+    background-color: #313131;
+  }
   .logo {
+    font-size: 28px;
+
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
     display: block;
 
-    width: $width / 10;
-    img {
-      max-width: 100%;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+    }
+    .logo-white {
+      color: #fff;
+    }
+    .logo-red {
+      color: $orange;
     }
   }
 }
 nav {
   ul {
-    @extend .justify-child;
+    display: block;
+
+    text-align: left;
+
     @extend .clearfix;
     li {
       display: inline-block;
