@@ -207,6 +207,9 @@ function wpeExcerpt20($length) {
 function wpeExcerpt40($length) {
   return 40;
 }
+function wpeExcerpt35($length) {
+  return 35;
+}
 //  Create the Custom Excerpts callback
 //  RU: Собственная обрезка контента
 function wpeExcerpt($length_callback = '', $more_callback = '') {
@@ -266,6 +269,14 @@ function add_slug_to_body_class($classes) {
   return $classes;
 }
 
+/**
+ * If more than one page exists, return TRUE.
+ */
+function show_posts_nav() {
+  global $wp_query;
+  return ($wp_query->max_num_pages > 1);
+}
+
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
 function html5wp_pagination()
 {
@@ -275,7 +286,9 @@ function html5wp_pagination()
     'base' => str_replace($big, '%#%', get_pagenum_link($big)),
     'format' => '?paged=%#%',
     'current' => max(1, get_query_var('paged')),
-    'total' => $wp_query->max_num_pages
+    'total' => $wp_query->max_num_pages,
+    'prev_text' => '←',
+    'next_text' => '→',
   ));
 }
 
