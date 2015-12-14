@@ -29,16 +29,5 @@
 
     <?php wp_footer(); ?>
 
-<script>
-$(document).ready(function() {
-  $('.pgwSlider').pgwSlider({
-      maxHeight : 360
-    }
-  );
-});
-</script>
-
-
-
 </body>
 </html>

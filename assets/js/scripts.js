@@ -447,7 +447,9 @@
 
             // Update list items
             pgwSlider.plugin.find('.ps-list > li').css('opacity', '0.6');
+            pgwSlider.plugin.find('.ps-list > li').removeClass('current-slide');
             pgwSlider.plugin.find('.ps-list > li.elt_' + element.id).css('opacity', '1');
+            pgwSlider.plugin.find('.ps-list > li.elt_' + element.id).addClass('current-slide');
 
             elementContainer.find('li').not('.elt_' + pgwSlider.currentSlide).not('.elt_' + element.id).each(function(){
                 if (typeof $(this).stop == 'function') {
@@ -771,3 +773,10 @@
         return this;
     }
 })(window.Zepto || window.jQuery);
+
+$(document).ready(function() {
+  $('.pgwSlider').pgwSlider({
+      maxHeight : 360
+    }
+  );
+});
