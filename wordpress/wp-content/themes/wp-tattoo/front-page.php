@@ -1,9 +1,26 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
+  <?php if( have_rows('slider') ): ?>
     <article class="home-slider col-md-12">
-      slider
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit maiores perspiciatis odit, tempora necessitatibus error consequuntur rem inventore incidunt et non ipsa vel soluta labore sit voluptate, expedita quibusdam?
+      <ul class="pgwSlider">
+      <?php while( have_rows('slider') ): the_row();
+        // vars
+        $image = get_sub_field('img');
+        $button = get_sub_field('button-text');
+        $content = get_sub_field('img-text');
+        $link = get_sub_field('link');
+        ?>
+
+          <li>
+            <a href="<?php echo $link; ?>" target="_blank">
+              <img src="<?php echo $image; ?>" data-description="<?php echo $content; ?>">
+              <span><?php echo $button; ?></span>
+            </a>
+          </li>
+      <?php endwhile; ?>
+      </ul>
     </article><!-- /.home-slider col-md-12 -->
+  <?php endif; ?>
 
   </div><!-- inner row -->
 

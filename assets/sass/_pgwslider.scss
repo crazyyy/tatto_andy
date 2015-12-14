@@ -1,0 +1,262 @@
+/**
+ * PgwSlider - Version 2.3
+ *
+ * Copyright 2014, Jonathan M. Piat
+ * http://pgwjs.com - http://pagawa.com
+ *
+ * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
+ */
+
+.pgwSlider {
+  width: 100%;
+
+  color: #fff;
+  a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #fff;
+  }
+  .ps-current {
+    font-size: 1rem;
+
+    position: relative;
+
+    float: left;
+    overflow: hidden;
+
+    width: 74%;
+    height: inherit;
+  }
+  &.listOnTheLeft .ps-current {
+    float: right;
+  }
+  .ps-current {
+    ul {
+      width: 100%;
+    }
+    li {
+      z-index: 1;
+
+      display: none;
+
+      width: 100%;
+
+      opacity: 0;
+    }
+    img {
+      display: block;
+
+      min-width: 100%;
+      max-width: 100%;
+      height: auto;
+
+      transition: margin-top 250ms linear;
+    }
+  }
+  .ps-caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    padding: 12px;
+
+    background: rgba(0, 0, 0, .7);
+  }
+}
+
+ul.pgwSlider,
+.pgwSlider ul {
+  float: right;
+
+  width: 25%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+ul.pgwSlider.listOnTheLeft,
+.pgwSlider.listOnTheLeft > ul {
+  float: left;
+}
+
+ul.pgwSlider > li,
+.pgwSlider > .ps-list > li {
+  font-size: .8rem;
+
+  position: relative;
+
+  overflow: hidden;
+
+  height: 50px;
+  margin-bottom: 6px;
+
+  transition: opacity 200ms linear;
+
+  opacity: .6;
+
+  filter: alpha(opacity = 60);
+}
+
+ul.pgwSlider > li:last-child,
+.pgwSlider > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+ul.pgwSlider > li span,
+.pgwSlider > .ps-list > li span {
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  overflow: hidden;
+
+  width: 100%;
+  padding: 5px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  background: rgba(0, 0, 0, .7);
+}
+
+ul.pgwSlider > li:hover,
+.pgwSlider > ul > li:hover {
+  opacity: 1 !important;
+}
+
+ul.pgwSlider > li img {
+  display: block;
+
+  width: 100%;
+  min-height: 100%;
+
+  transition: margin-top 250ms linear;
+}
+
+.pgwSlider {
+  > ul > li img {
+    display: block;
+
+    width: 100%;
+    min-height: 100%;
+
+    transition: margin-top 250ms linear;
+  }
+  .ps-prevIcon {
+    display: block;
+
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #fff transparent;
+  }
+  .ps-nextIcon {
+    display: block;
+
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color: transparent #fff transparent;
+  }
+  .ps-current {
+    .ps-prev {
+      position: absolute;
+      top: 45%;
+      left: 0;
+
+      padding: 20px 20px 20px 17px;
+
+      cursor: pointer;
+
+      border: 1px solid #777;
+      border-left: 0;
+      border-radius: 0 4px 4px 0;
+      background: rgba(0, 0, 0, .5);
+    }
+    .ps-next {
+      position: absolute;
+      top: 45%;
+      right: 0;
+
+      padding: 20px 17px 20px 20px;
+
+      cursor: pointer;
+
+      border: 1px solid #777;
+      border-right: 0;
+      border-radius: 4px 0 0 4px;
+      background: rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+/*
+ * The media-queries are not used because IE8 doesn't support them.
+ */
+
+ul.pgwSlider.wide > li {
+  width: 100% !important;
+}
+
+.pgwSlider {
+  &.wide > ul > li {
+    width: 100% !important;
+  }
+  &.narrow .ps-current {
+    font-size: .8rem;
+
+    width: 100%;
+    margin-bottom: 6px;
+    img {
+      width: 100%;
+      min-height: inherit;
+    }
+  }
+}
+
+ul.pgwSlider.narrow,
+.pgwSlider.narrow > ul {
+  width: 100%;
+}
+
+ul.pgwSlider.narrow > li,
+.pgwSlider.narrow > .ps-list > li {
+  font-size: .7rem;
+
+  float: left;
+
+  min-width: 15%;
+  min-height: 50px;
+  max-height: 70px;
+  margin-bottom: 0;
+}
+
+ul.pgwSlider.narrow.listOnTheLeft > li {
+  float: right;
+}
+
+.pgwSlider.narrow {
+  &.listOnTheLeft > ul > li {
+    float: right;
+  }
+  .ps-caption {
+    padding: 8px;
+  }
+  .ps-current {
+    .ps-prev {
+      top: 40%;
+
+      padding: 15px 15px 15px 12px;
+    }
+    .ps-next {
+      top: 40%;
+
+      padding: 15px 12px 15px 15px;
+    }
+  }
+}

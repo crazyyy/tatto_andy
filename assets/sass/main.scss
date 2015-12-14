@@ -12,6 +12,7 @@
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_opensans';
 @import 'fonts/font_intro';
+@import 'pgwslider';
 
 body {
   font-family: $base-font-family;
@@ -405,6 +406,63 @@ aside {
 .home-slider {
   margin: 0 auto 5px;
 }
+.pgwSlider {
+  overflow: hidden;
+
+  height: 360px;
+  .ps-current {
+    width: 66%;
+    .ps-caption {
+      font-family: $fibc;
+      font-size: 24px;
+
+      bottom: 35px;
+      left: 30px;
+
+      padding: 0 0 20px;
+
+      color: #fff;
+      background-color: transparent;
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 90px;
+        height: 5px;
+
+        background-color: #fff;
+
+        @extend .dblock;
+      }
+      b,
+      br {
+        display: none;
+      }
+      a {
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .ps-list {
+    width: 32.7%;
+    li {
+      background-color: #e3e3df;
+      img {
+        display: none;
+      }
+      span {
+        color: $dark-gray;
+        display: block;
+        width: 80%;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
 .cat-title {
   font-family: $fiblc;
   font-size: 22px;
@@ -431,7 +489,8 @@ aside {
 
   text-transform: uppercase;
 
-  color: $dark-gray;  border-bottom: 5px solid $red;
+  color: $dark-gray;
+  border-bottom: 5px solid $red;
 }
 .single-cat-title {
   font-family: $fibb;
