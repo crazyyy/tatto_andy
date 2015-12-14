@@ -422,6 +422,17 @@ aside {
     color: $dark-gray;
   }
 }
+.home-loop-title {
+  font-family: $fibb;
+  font-size: 22px;
+
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+
+  text-transform: uppercase;
+
+  color: $dark-gray;  border-bottom: 5px solid $red;
+}
 .single-cat-title {
   font-family: $fibb;
   font-size: 20px;
