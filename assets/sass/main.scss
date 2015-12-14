@@ -97,9 +97,11 @@ header {
     background-color: #313131;
   }
   .logo {
-    font-size: rem(28, 14);
+    font-size: 28px;
 
     display: block;
+
+    padding-top: 3px;
 
     text-transform: uppercase;
     a {
@@ -110,6 +112,8 @@ header {
       line-height: 1;
     }
     .logo-white {
+      margin-left: 13px;
+
       color: #fff;
     }
     .logo-red {
@@ -127,6 +131,7 @@ nav {
     @extend .clearfix;
     li {
       font-family: $fibb;
+      font-size: 14px;
 
       display: inline-block;
 
@@ -140,7 +145,7 @@ nav {
     }
   }
   .headnav {
-    font-size: 1rem;
+    padding-top: 15px;
 
     text-transform: uppercase;
     a {
@@ -153,6 +158,11 @@ nav {
 
 section {
   padding: 0 0 $footer;
+  .inner {
+    padding: 30px 15px;
+
+    background-color: #fff;
+  }
 }
 article {
   @extend .clearfix;
@@ -160,15 +170,86 @@ article {
 .looper {
   @extend .clearfix;
 }
-
+.home-slider {
+  margin: 0 auto 5px;
+}
 
 footer {
   height: $footer;
   margin: $footer_margin auto 0;
-
-  background-color: $light-gray;
   .inner {
     height: $footer;
+
+    border-top: 6px solid $orange;
+    background-color: #000;
+  }
+  .copyright {
+    font-family: $fib;
+
+    padding-top: 23px;
+
+    color: $light-gray;
+  }
+  .footer-nav,
+  .social {
+    display: inline-block;
+    li {
+      display: inline-block;
+    }
+  }
+  .footer-nav {
+    padding-top: 18px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    li {
+      margin: 0 14px;
+    }
+    a {
+      font-family: $fir;
+
+      color: $light-gray;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .social {
+    padding-top: 15px;
+
+    text-align: center;
+    .fa {
+      line-height: 2;
+
+      display: block;
+
+      height: 100%;
+
+      color: #000;
+    }
+    li {
+      width: 30px;
+      height: 30px;
+      margin: 0 5px;
+
+      text-align: center;
+
+      border-radius: 1px;
+      background-color: #a4a4a4;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        background-color: darken(#a4a4a4, 10%);
+        .fa {
+          color: $orange;
+        }
+      }
+    }
   }
 }
 
