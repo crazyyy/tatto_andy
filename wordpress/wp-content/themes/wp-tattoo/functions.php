@@ -5,6 +5,11 @@
  *  Custom functions, support, custom post types and more.
  */
 
+include_once('acf/acf.php');
+include_once('acfr/acf-repeater.php');
+define( 'ACF_LITE', true );
+
+
 //  Enable styles for WP admin panel
 function wpeAdminThemeStyle() {
   wp_enqueue_style('wpe-admin-style', get_template_directory_uri() . '/css/admin.css');
@@ -655,5 +660,97 @@ function top_level_cats_remove_cat_base($link) {
 
   return preg_replace('|' . $category_base . '|', '', $link, 1);
 }
+
+if(function_exists("register_field_group"))
+{
+  register_field_group(array (
+    'id' => 'acf_home',
+    'title' => 'home',
+    'fields' => array (
+      array (
+        'key' => 'field_566ed72ca6c67',
+        'label' => 'slider',
+        'name' => 'slider',
+        'type' => 'repeater',
+        'sub_fields' => array (
+          array (
+            'key' => 'field_566ed73ba6c68',
+            'label' => 'Картинка',
+            'name' => 'img',
+            'type' => 'image',
+            'column_width' => '',
+            'save_format' => 'url',
+            'preview_size' => 'medium',
+            'library' => 'all',
+          ),
+          array (
+            'key' => 'field_566ed75ba6c69',
+            'label' => 'Текст на слайд',
+            'name' => 'img-text',
+            'type' => 'text',
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ),
+          array (
+            'key' => 'field_566ed7f0a6c6a',
+            'label' => 'Ссылка слайда',
+            'name' => 'link',
+            'type' => 'text',
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ),
+          array (
+            'key' => 'field_566ed7fca6c6b',
+            'label' => 'Текст на кнопку',
+            'name' => 'button-text',
+            'type' => 'text',
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ),
+        ),
+        'row_min' => '',
+        'row_limit' => '',
+        'layout' => 'table',
+        'button_label' => 'добавить слайд',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'page_template',
+          'operator' => '==',
+          'value' => 'front-page.php',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'default',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+}
+
+
+
 
 ?>
