@@ -1,4 +1,3 @@
-<!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -20,25 +19,26 @@
     <![endif]-->
     <!-- css + javascript -->
     <?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
 <!-- wrapper -->
 <div class="wrapper">
   <header role="banner">
-    <div class="inner">
+    <div class="inner row">
 
-      <div class="logo">
-        <?php if ( is_front_page() && is_home() ){ } else { ?>
-          <a href="<?php echo home_url(); ?>">
-            <?php  } ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-            <?php if ( is_front_page() && is_home() ){
-            } else { ?>
-          </a>
-        <?php } ?>
+      <div class="logo col-md-3">
+      <?php if ( is_front_page() && is_home() ){ } else { ?>
+        <a href="<?php echo home_url(); ?>">
+          <?php  } ?>
+          <span class="logo-white">tatuazh</span><span class="logo-red">pro</span>
+          <?php if ( is_front_page() && is_home() ){
+          } else { ?>
+        </a>
+      <?php } ?>
       </div><!-- /logo -->
 
-      <nav class="nav" role="navigation">
+      <nav class="nav col-md-9" role="navigation">
         <?php wpeHeadNav(); ?>
       </nav><!-- /nav -->
 
@@ -46,4 +46,4 @@
   </header><!-- /header -->
 
   <section role="main">
-    <div class="inner">
+    <div class="inner row">
