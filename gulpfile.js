@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 /* if work with html == true, else - false */
 var htmlOWp = false,
-  wpThemeName = 'wp-tatto',
+  wpThemeName = 'wp-tattoo',
   wpDomain = 'tatto.dev';
 
 var AUTOPREFIXER_BROWSERS = [
