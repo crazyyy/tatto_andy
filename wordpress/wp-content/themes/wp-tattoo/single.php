@@ -8,6 +8,8 @@
 
       <?php edit_post_link(); ?>
 
+      <?php setPostViews(get_the_ID()); ?>
+
       <?php comments_template(); ?>
 
       <?php get_template_part('include-related'); ?>

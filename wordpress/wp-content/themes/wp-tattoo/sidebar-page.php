@@ -1,7 +1,7 @@
 <aside class="sidebar col-md-4" role="complementary">
 
   <div class="widget widget-last-news">
-    <h6>новые новости</h6>
+    <h6>популярные статьи</h6>
     <ul>
 
       <?php query_posts("showposts=5"); ?>
