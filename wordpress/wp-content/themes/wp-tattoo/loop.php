@@ -13,7 +13,7 @@
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
     </h2><!-- /post title -->
 
-    <?php wpeExcerpt('wpeExcerpt35'); ?>
+    <?php wpeExcerpt('wpeExcerpt20'); ?>
 
   </div><!-- /looper -->
   <?php endwhile; else: ?>
