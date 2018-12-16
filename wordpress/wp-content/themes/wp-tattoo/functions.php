@@ -39,6 +39,9 @@ function wpeStyles()  {
 
   wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
   wp_enqueue_style('wpeasy-style'); // Enqueue it!
+  
+  wp_register_style('develop-style', get_template_directory_uri() . '/css/develop.css', array(), '1.0', 'all');
+  wp_enqueue_style('develop-style'); // Enqueue it!
 }
 function wpeHeaderScripts() {
   if (!is_admin()) {
