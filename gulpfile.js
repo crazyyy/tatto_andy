@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 /* if work with html == true, else - false */
 var htmlOWp = false,
   wpThemeName = 'wp-tattoo',
-  wpDomain = 'tatto.dev';
+  wpDomain = 'tatuazhpro.ru';
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 8', 'ie_mob >= 10', 'ff >= 20', 'chrome >= 24', 'safari >= 5', 'opera >= 12', 'ios >= 7', 'android >= 2.3', '> 1%', 'last 4 versions', 'bb >= 10'
